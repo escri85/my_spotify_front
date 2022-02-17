@@ -67,14 +67,14 @@ label{
 	font-size: 2.3em;
 	justify-content: center;
 	display: flex;
-	margin: 60px;
+	margin: 50px;
 	font-weight: bold;
 	cursor: pointer;
 	transition: .5s ease-in-out;
 }
 input{
 	width: 60%;
-	height: 20px;
+	height: auto;
 	background: #e0dede;
 	justify-content: center;
 	display: flex;
@@ -129,3 +129,14 @@ button:hover{
 	transform: scale(.6);
 }
 
+.p-input-icon-right > i:last-of-type, .p-input-icon-right > svg:last-of-type, .p-input-icon-right > .p-input-suffix {
+    right: 4.75rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+.p-password {
+    position: relative;
+    display: inline-flex;
+    width: -webkit-fill-available;
+}
+.signUp{margin-top: -10%;}
+.loginn{margin-top: 30%;}
