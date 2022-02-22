@@ -1,0 +1,22 @@
+
+
+.imgArtist{
+    width: 250px;
+    height: 250px;
+    margin: 5px;
+   
+}
+.containerArtist{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.cardArtist{
+    
+      &:hover {
+      cursor: pointer;
+      
+      }
+}

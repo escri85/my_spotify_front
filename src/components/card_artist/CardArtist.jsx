@@ -1,16 +1,19 @@
 import React from "react";
-
+import "./CardArtist.scss";
+import {  useParams } from "react-router-dom";
 const CardArtist = (props) => {
-  const { artist, busquedaInput} = props;
-  return (
-    <div>
-      {artist.map((item) => (
-        <div>
-          {item.images.map((imagen) =>imagen.width===640 ? <img src={imagen.url} alt="" /> : null)} 
+  const { artist,album} = props;
+const name = artist.map((item)=>item.name)
+const params = useParams()
+  console.log('nombre',name);
+  console.log('parametros',params);
+  console.log('albums',album);
 
-          <p>{item.name}</p>
-        </div>
-      ))}
+
+  return (
+    // <div>{params.name}</div>
+    <div>
+      
     </div>
   );
 };
