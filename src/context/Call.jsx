@@ -3,7 +3,6 @@ import {  NavLink } from "react-router-dom";
 import './Call.scss'
 const Call = ({artist}) => {
 
-
   return (
     <div className="containerArtist">
       {artist.map((item) =>

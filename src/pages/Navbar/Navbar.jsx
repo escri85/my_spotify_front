@@ -1,8 +1,11 @@
 import React from "react";
 import { Menubar } from "primereact/menubar";
-import { InputText } from "primereact/inputtext";
+import './Navbar.scss';
+import { useNavigate } from "react-router-dom";
+
 
 const Navbar = () => {
+  const navigate = useNavigate()
   const items = [
     {
       label: "Music",
@@ -11,14 +14,23 @@ const Navbar = () => {
         {
           label: "Artist",
           icon: "",
+          command:()=>{
+            navigate("/artist")
+          }
         },
         {
           label: "Songs",
           icon: "",
+          command:()=>{
+            navigate("/track")
+          }
         },
         {
           label: "Album",
           icon: "",
+          command:()=>{
+            navigate("/album")
+          }
         },
       ],
     },
@@ -137,18 +149,10 @@ const Navbar = () => {
       className="mr-2"
     ></img>
   );
-  const end = (
-    <InputText
-      placeholder="Search"
-      type="text"
-      // onChange={handleChange}
-      // value={busqueda}
-    />
-  );
   return (
     <div>
       <div className="navbar">
-        <Menubar model={items} start={start} end={end} />
+        <Menubar model={items} start={start} style={{justify:'space-betweend'}}/>
       </div>
     </div>
   );

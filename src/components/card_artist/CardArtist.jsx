@@ -8,10 +8,9 @@ const params = useParams()
   console.log('nombre',name);
   console.log('parametros',params);
   console.log('albums',album);
-
+console.log(artist);
 
   return (
-    // <div>{params.name}</div>
     <div>
       
     </div>

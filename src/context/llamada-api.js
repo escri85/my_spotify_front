@@ -8,7 +8,8 @@ const ContextoApi = React.createContext()
 
 
 const ProovedorApi = ({children})=>{
-  
+  const [inputValue, setInputValue] = useState('');
+
     const [album, setAlbum] = useState([]);
     const [track, setTrack] = useState([]);
     const [artist, setArtist] = useState([]);
@@ -38,7 +39,7 @@ const ProovedorApi = ({children})=>{
           };
           axios
             .get(
-              `https://api.spotify.com/v1/search?q=blink-182&type=track%2Calbum%2Cartist`,
+              `https://api.spotify.com/v1/search?q=korn&type=track%2Calbum%2Cartist`,
               headers2
             )
             .then((res) => {
@@ -80,10 +81,10 @@ const ProovedorApi = ({children})=>{
     //   setBusquedaInput(resultadoBusqueda)
     // }
 
-
+console.log('este es el valor del contexto =>',inputValue);
 
     return (
-        <ContextoApi.Provider value={{album,track,artist}}>
+        <ContextoApi.Provider value={{album,track,artist,inputValue,setInputValue}}>
 {children}
         </ContextoApi.Provider>
     )

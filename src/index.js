@@ -8,7 +8,6 @@ import { ProovedorApi } from './context/llamada-api';
 ReactDOM.render(
   <React.StrictMode>
     <ProovedorApi>
-
     <App />
     </ProovedorApi>
   </React.StrictMode>,
